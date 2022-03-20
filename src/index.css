@@ -16,4 +16,21 @@ code {
 .App {
   text-align: center;
 }
+
+.btn-info {
+  padding: .5rem 1rem;
+  border-radius: .4rem;
+  border: 1px solid rgb(12, 150, 214);
+  background-color: rgb(12, 150, 214);
+  color: #fff;
+  cursor: pointer;
+}
+.btn-warning {
+  padding: .5rem 1rem;
+  border-radius: .4rem;
+  border: 1px solid rgba(255, 166, 0, 0.863);
+  background-color: rgba(255, 166, 0, 0.863);
+  color: #444;
+  cursor: pointer;
+}
 /* App css end */

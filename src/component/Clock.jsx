@@ -17,13 +17,18 @@ export default class Clock extends Component {
         clearInterval(this.timer)
     }
 
-    handleChange = () =>{
-        const {locale} = this.state;
-        if(locale === 'en-US'){
-            this.setState({locale: 'bn-BD'});
-        }else {
-            this.setState({locale: 'en-US'});
-        }
+    // handleChange = () =>{
+    //     const {locale} = this.state;
+    //     if(locale === 'en-US'){
+    //         this.setState({locale: 'bn-BD'});
+    //     }else {
+    //         this.setState({locale: 'en-US'});
+    //     }
+    // }
+
+
+    handleChange = (locale) =>{
+        this.setState({locale})
     }
 
     tick = () => {
@@ -36,7 +41,9 @@ export default class Clock extends Component {
         return (
             <>
                 <h1>{date.toLocaleTimeString(locale)}</h1>
-                <Button change={this.handleChange} locale={locale} />
+                {
+                    locale === 'bn-BD' ? <Button change={this.handleChange} locale='en-US' show /> : <Button change={this.handleChange} locale='bn-BD' />
+                }
             </>
         )
     }
