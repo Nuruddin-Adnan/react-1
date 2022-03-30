@@ -1,14 +1,14 @@
-// import ClockList from './component/ClockList';
-// import Counter from './component/Counter';
-import Form from './component/Form';
+import Calculator from './Component/Calculator';
+import ToDo from './Component/ToDo';
+
 
 function App() {
-  const quantities = [1, 2, 3];
   return (
-    <div className="App">
-      {/* <ClockList quantities={quantities} />
-      <Counter /> */}
-      <Form />
+    <div className="container">
+      <div className="vstack gap-2 col-md-5 mx-auto">
+        {/* <Calculator /> */}
+        <ToDo />
+      </div>
     </div>
   );
 }
